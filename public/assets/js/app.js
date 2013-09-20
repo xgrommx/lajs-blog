@@ -15,5 +15,14 @@ blog.config(function($stateProvider, $urlRouterProvider) {
 				"content": { templateUrl: "views/post/list", controller: PostListController }
 			}
 		}
+	).state(
+		'login', {
+			url: '/login',
+			views: {
+				"content": {
+					templateUrl: "views/user/login", controller: LoginController
+				}
+			}
+		}
 	)
 });

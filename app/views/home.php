@@ -9,6 +9,7 @@
 		<script src="<?php echo URL::asset('assets/js/angular-1.0.8/angular-ui-router.min.js') ?>" type="text/javascript"></script>
 		<script src="<?php echo URL::asset('assets/js/app.js'); ?>" type="text/javascript"></script>
 		<script src="<?php echo URL::asset('assets/js/controllers/PostControllers.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/controllers/LoginController.js'); ?>" type="text/javascript"></script>
 	</head>
 
 	<body>
@@ -30,6 +31,9 @@
 						<li><a href="#about" ng-click="active='projects'">Projects</a></li>
 						<li><a href="#contact" ng-click="active='contact'">Contact</a></li>
 					</ul>
+
+					<button type="button" class="btn btn-default navbar-btn pull-right" ui-sref="login">Sign in</button>
+
 				</div><!-- /.nav-collapse -->
 			</div><!-- /.container -->
 		</div><!-- /.navbar -->

@@ -19,7 +19,12 @@ class LoginController extends \BaseController {
 	}
 
 	public function index() {
+		$user = \Input::get('user');
 
+		if($this->userService->authenticate($user))
+			echo true;
+		else
+			echo false;
 	}
 
 }

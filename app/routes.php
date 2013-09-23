@@ -15,6 +15,10 @@ Route::get('/', 'flakron\blog\app\controllers\HomeController@index');
 
 Route::get('/views/{controller}/{view}', 'flakron\blog\app\controllers\ViewController@index');
 
+/**
+ * Login
+ */
 Route::get('/login', 'flakron\blog\app\controllers\LoginController@index');
+Route::post('/login', 'flakron\blog\app\controllers\LoginController@index');
 
 Route::get('/post/list', 'flakron\blog\app\controllers\PostController@index');

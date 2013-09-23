@@ -4,7 +4,7 @@ var blog = angular.module('blog', ['ui.router']);
 
 blog.config(function($stateProvider, $urlRouterProvider) {
 	//
-	// For any unmatched url, redirect to /state1
+	// For any unmatched url
 	$urlRouterProvider.otherwise("/post/list");
 	//
 	// Now set up the states
@@ -21,6 +21,15 @@ blog.config(function($stateProvider, $urlRouterProvider) {
 			views: {
 				"content": {
 					templateUrl: "views/user/login", controller: LoginController
+				}
+			}
+		}
+	).state(
+		'admin', {
+			url: '/navigation/sidebar-admin',
+			views: {
+				"side-navigation": {
+					templateUrl: "views/navigation/sidebar-admin"
 				}
 			}
 		}

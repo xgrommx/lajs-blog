@@ -7,7 +7,7 @@
 			<div class="form-group">
 				<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
 				<div class="col-lg-10">
-					<input type="email" class="form-control" placeholder="Email" ng-model="user.email">
+					<input type="email" class="form-control" placeholder="Email" ng-model="user.login">
 				</div>
 			</div>
 			<div class="form-group">

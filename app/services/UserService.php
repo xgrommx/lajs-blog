@@ -8,4 +8,20 @@ namespace flakron\blog\app\services;
  */
 interface UserService {
 
+	/**
+	 * Fetch user by its login
+	 *
+	 * @param String $login
+	 * @return User
+	 */
+	public function fetchByLogin($login);
+
+	/**
+	 * Validate user login and password
+	 *
+	 * @param array $user
+	 * @return boolean
+	 */
+	public function authenticate($user);
+
 }

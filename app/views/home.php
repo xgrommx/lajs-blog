@@ -46,7 +46,7 @@
 				</div><!--/span-->
 
 				<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-					<div class="well sidebar-nav">
+					<div class="well sidebar-nav" ui-view="side-navigation">
 						<ul class="nav">
 							<li>Sidebar</li>
 							<li class="active"><a href="#">Link</a></li>
@@ -67,7 +67,7 @@
 			<hr>
 
 			<footer>
-				<p>&copy; Company 2013</p>
+				<p>&copy; Flakron Bytyqi 2013</p>
 			</footer>
 
 		</div><!--/.container-->

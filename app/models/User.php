@@ -5,14 +5,14 @@ namespace flakron\blog\app\models;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends \Eloquent implements \UserInterface, \RemindableInterface {
+class User extends \Eloquent implements UserInterface, RemindableInterface {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'user_user';
+	protected $table = 'usr_user';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -48,7 +48,7 @@ class User extends \Eloquent implements \UserInterface, \RemindableInterface {
 	 */
 	public function getReminderEmail()
 	{
-		return $this->email;
+		return $this->login;
 	}
 
 }

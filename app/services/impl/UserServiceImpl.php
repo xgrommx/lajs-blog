@@ -1,7 +1,9 @@
 <?php
 namespace flakron\blog\app\services\impl;
 
+use flakron\blog\app\models\User;
 use flakron\blog\app\services\UserService;
+use Illuminate\Support\Facades\Hash;
 
 /**
  * Class UserServiceImpl
@@ -10,4 +12,30 @@ use flakron\blog\app\services\UserService;
  */
 class UserServiceImpl implements UserService {
 
+	/**
+	 * Fetch user by its login
+	 *
+	 * @param String $login
+	 * @return User
+	 */
+	public function fetchByLogin($login) {
+		return User::where('login', $login)->firstOrFail();
+	}
+
+	/**
+	 * Authenticate user login and password
+	 *
+	 * @param array $user
+	 * @return boolean
+	 */
+	public function authenticate($user) {
+		$dbUser = $this->fetchByLogin($user['login']);
+
+		if ($dbUser != null && $dbUser->login == $user['login'] && \Hash::check($user['password'] . $dbUser->salt, $dbUser->password)) {
+			\Auth::login($dbUser);
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

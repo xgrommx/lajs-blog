@@ -26,7 +26,7 @@ blog.config(function($stateProvider, $urlRouterProvider) {
 		}
 	).state(
 		'admin', {
-			url: '/navigation/sidebar-admin',
+			url: '/admin',
 			views: {
 				"side-navigation": {
 					templateUrl: "views/navigation/sidebar-admin"

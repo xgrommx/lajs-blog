@@ -21,4 +21,9 @@ Route::get('/views/{controller}/{view}', 'flakron\blog\app\controllers\ViewContr
 Route::get('/login', 'flakron\blog\app\controllers\LoginController@index');
 Route::post('/login', 'flakron\blog\app\controllers\LoginController@index');
 
-Route::get('/post/list', 'flakron\blog\app\controllers\PostController@index');
+/**
+ * Logout
+ */
+Route::get('/logout', 'flakron\blog\app\controllers\LogoutController@index');
+
+Route::get('/post/list/{count}', 'flakron\blog\app\controllers\PostController@index');

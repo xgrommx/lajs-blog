@@ -6,13 +6,14 @@
  * @author Flakron Bytyqi <flakron@gmail.com>
  *
  * @param $scope
- * @param $http
+ * @param $location
  * @constructor
  */
-function NavigationController($scope, $http) {
+function NavigationController($scope, $location, UserService) {
 
-	$scope.showContent = function() {
-
-	};
+	$scope.logout = function() {
+		UserService.logout();
+		$location.path('/');
+	}
 
 }

@@ -1,7 +1,9 @@
-<div class="row" ng-repeat="post in posts">
-	<div class="col-12">
-		<h2>{{ post.title }} - {{active}}</h2>
-		<p>{{ post.body }}</p>
-		<p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-	</div><!--/span-->
-</div><!--/row-->
+<div class="row" ng-controller="PostListController">
+	<div class="row" ng-repeat="post in posts">
+		<div class="col-12">
+			<h2>{{ post.title }} - {{active}}</h2>
+			<p>{{ post.body }}</p>
+			<p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+		</div><!--/span-->
+	</div><!--/row-->
+</div>

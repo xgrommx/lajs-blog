@@ -16,9 +16,9 @@ class PostController extends \BaseController {
 		$this->postService = $postService;
 	}
 
-	public function index() {
+	public function index($count) {
 		$posts = array();
-		for($i = 0; $i < 10; $i++) {
+		for($i = 0; $i < $count; $i++) {
 			$post['title'] = "Hello $i";
 			$post['body'] = "Body $i";
 

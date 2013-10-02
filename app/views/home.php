@@ -1,20 +1,16 @@
 <!doctype html>
-<html lang="en" ng-app="blog">
+<html lang="en" ng-app="BlogModule">
 
 	<head>
 		<link href="<?php echo URL::asset('assets/css/app.css'); ?>" media="all" type="text/css" rel="stylesheet">
 		<link href="<?php echo URL::asset('assets/css/bootstrap.min.css'); ?>" media="all" type="text/css" rel="stylesheet">
 
-		<script src="<?php echo URL::asset('assets/js/angular-1.0.8/angular.min.js'); ?>" type="text/javascript"></script>
-		<script src="<?php echo URL::asset('assets/js/angular-1.0.8/angular-ui-router.min.js') ?>" type="text/javascript"></script>
-		<script src="<?php echo URL::asset('assets/js/app.js'); ?>" type="text/javascript"></script>
-		<script src="<?php echo URL::asset('assets/js/controllers/PostControllers.js'); ?>" type="text/javascript"></script>
-		<script src="<?php echo URL::asset('assets/js/controllers/LoginController.js'); ?>" type="text/javascript"></script>
+		<title>flakron.net</title>
 	</head>
 
 	<body>
 
-		<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="navbar navbar-fixed-top navbar-inverse" role="navigation" ui-view="top-nav">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -41,6 +37,7 @@
 		<div class="container">
 
 			<div class="row row-offcanvas row-offcanvas-right">
+
 				<div class="col-xs-12 col-sm-9" ui-view="content">
 
 				</div><!--/span-->
@@ -71,6 +68,18 @@
 			</footer>
 
 		</div><!--/.container-->
+
+		<script src="<?php echo URL::asset('assets/js/angular-1.0.8/angular.min.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/angular-1.0.8/angular-ui-router.min.js') ?>" type="text/javascript"></script>
+
+		<script src="<?php echo URL::asset('assets/js/app.js'); ?>" type="text/javascript"></script>
+
+		<script src="<?php echo URL::asset('assets/js/controllers/PostControllers.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/controllers/LoginController.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/controllers/NavigationController.js'); ?>" type="text/javascript"></script>
+
+		<script src="<?php echo URL::asset('assets/js/services/PostService.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/services/UserService.js'); ?>" type="text/javascript"></script>
 
 	</body>
 

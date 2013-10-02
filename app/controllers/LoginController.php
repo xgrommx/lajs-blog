@@ -22,9 +22,9 @@ class LoginController extends \BaseController {
 		$user = \Input::get('user');
 
 		if($this->userService->authenticate($user))
-			echo true;
+			echo json_encode(array('validLogin' => true));
 		else
-			echo false;
+			echo json_encode(array('validLogin' => false));
 	}
 
 }

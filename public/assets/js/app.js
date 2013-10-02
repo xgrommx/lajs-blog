@@ -1,6 +1,6 @@
 'use strict';
 
-var blog = angular.module('blog', ['ui.router']);
+var blog = angular.module('BlogModule', ['ui.router']);
 
 blog.config(function($stateProvider, $urlRouterProvider) {
 	//
@@ -9,10 +9,19 @@ blog.config(function($stateProvider, $urlRouterProvider) {
 	//
 	// Now set up the states
 	$stateProvider.state(
+		'home', {
+			abstract: true,
+			views: {
+				"side-navigation": {
+					templateUrl: "views/navigation/sidebar-admin"
+				}
+			}
+		}
+	).state(
 		'postList', {
 			url: "/post/list",
 			views: {
-				"content": { templateUrl: "views/post/list", controller: PostListController }
+				"content": { templateUrl: "views/post/list" }
 			}
 		}
 	).state(
@@ -30,6 +39,9 @@ blog.config(function($stateProvider, $urlRouterProvider) {
 			views: {
 				"side-navigation": {
 					templateUrl: "views/navigation/sidebar-admin"
+				},
+				"top-nav" : {
+					templateUrl: "views/navigation/top-admin"
 				}
 			}
 		}

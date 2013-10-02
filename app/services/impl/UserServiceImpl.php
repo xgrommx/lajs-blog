@@ -1,9 +1,9 @@
 <?php
+
 namespace flakron\blog\app\services\impl;
 
 use flakron\blog\app\models\User;
 use flakron\blog\app\services\UserService;
-use Illuminate\Support\Facades\Hash;
 
 /**
  * Class UserServiceImpl

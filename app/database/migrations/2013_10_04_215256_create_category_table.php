@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostCategoryTable extends Migration {
+class CreateCategoryTable extends Migration {
 
 	/**
 	 * Run the migrations.

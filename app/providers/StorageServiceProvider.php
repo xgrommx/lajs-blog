@@ -2,6 +2,8 @@
 
 namespace flakron\blog\app\providers;
 
+use flakron\blog\app\services\impl\UserServiceImpl;
+use flakron\blog\app\services\impl\ValidationService;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -16,7 +18,9 @@ class StorageServiceProvider extends ServiceProvider {
 		/**
 		 * UserService
 		 */
-		$this->app->bind('flakron\blog\app\services\UserService', 'flakron\blog\app\services\impl\UserServiceImpl');
+		$this->app->bind('flakron\blog\app\services\UserService', function() {
+			return new ValidationService(new UserServiceImpl());
+		});
 
 		/**
 		 * PostService

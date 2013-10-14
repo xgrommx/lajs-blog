@@ -8,7 +8,7 @@ namespace flakron\blog\app\services;
  * @package flakron\blog\app\services
  * @author Flakron Bytyqi <flakron@gmail.com>
  */
-interface PostService {
+interface PostService extends AppService {
 
 	/**
 	 * Fetch all Posts

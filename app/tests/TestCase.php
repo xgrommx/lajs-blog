@@ -16,4 +16,18 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 		return require __DIR__.'/../../bootstrap/start.php';
 	}
 
+	/**
+	 * Method to create mock classes
+	 *
+	 * @param $class
+	 * @return \Mockery\MockInterface|Yay_MockObject
+	 */
+	public function mock($class) {
+		$mock = Mockery::mock($class);
+
+		$this->app->instance($class, $mock);
+
+		return $mock;
+	}
+
 }

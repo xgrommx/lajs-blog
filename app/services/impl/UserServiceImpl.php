@@ -3,6 +3,7 @@
 namespace flakron\blog\app\services\impl;
 
 use flakron\blog\app\models\User;
+use flakron\blog\app\services\AppService;
 use flakron\blog\app\services\UserService;
 
 /**

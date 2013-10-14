@@ -6,7 +6,7 @@ namespace flakron\blog\app\services;
  * @package flakron\blog\app\services
  * @author Flakron Bytyqi <flakron@gmail.com>
  */
-interface UserService {
+interface UserService extends AppService {
 
 	/**
 	 * Fetch user by its login

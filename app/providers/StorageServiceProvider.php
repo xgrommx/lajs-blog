@@ -18,9 +18,7 @@ class StorageServiceProvider extends ServiceProvider {
 		/**
 		 * UserService
 		 */
-		$this->app->bind('flakron\blog\app\services\UserService', function() {
-			return new ValidationService(new UserServiceImpl());
-		});
+		$this->app->bind('flakron\blog\app\services\UserService', 'flakron\blog\app\services\impl\UserServiceImpl');
 
 		/**
 		 * PostService

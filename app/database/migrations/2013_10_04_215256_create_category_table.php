@@ -10,7 +10,7 @@ class CreateCategoryTable extends Migration {
 	 * @return void
 	 */
 	public function up() {
-		\Schema::create('pst_category', function($table) {
+		\Schema::create('pst_category', function(\Illuminate\Database\Schema\Blueprint $table) {
 			$table->string('id', 36);
 			$table->primary('id');
 

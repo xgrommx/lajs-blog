@@ -20,18 +20,6 @@ class CreateUserTable extends Migration {
 			$table->string('salt', 36);
 			$table->string('password', 250);
 			$table->boolean('active');
-
-			$table->timestamp('create_date');
-
-			$table->string('created_by', 36)->nullable();
-			$table->foreign('created_by')->references('id')->on('usr_user')->onDelete('set null')->onUpdate('cascade');
-
-			$table->timestamp('update_date')->nullable();
-
-			$table->string('updated_by')->nullable();
-			$table->foreign('updated_by')->references('id')->on('usr_user')->onDelete('set null')->onUpdate('cascade');
-
-			$table->integer('update_no')->default(0);
 		});
 	}
 

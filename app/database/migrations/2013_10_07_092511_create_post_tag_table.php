@@ -16,11 +16,6 @@ class CreatePostTagTable extends Migration {
 
 			$table->primary(array('post_id', 'tag_id'));
 
-			$table->timestamp('create_date');
-
-			$table->string('created_by', 36);
-			$table->foreign('created_by')->references('id')->on('usr_user')->onDelete('set null')->onUpdate('cascade');
-
 		});
 	}
 

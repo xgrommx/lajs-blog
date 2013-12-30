@@ -18,18 +18,6 @@ class CreateCategoryTable extends Migration {
 
 			$table->string('parent_id', 36)->nullable();
 			$table->foreign('parent_id')->references('id')->on('pst_category')->onDelete('cascade')->onUpdate('cascade');
-
-			$table->timestamp('create_date');
-
-			$table->string('created_by', 36);
-			$table->foreign('created_by')->references('id')->on('usr_user')->onDelete('set null')->onUpdate('cascade');
-
-			$table->timestamp('update_date')->nullable();
-
-			$table->string('updated_by')->nullable();
-			$table->foreign('updated_by')->references('id')->on('usr_user')->onDelete('set null')->onUpdate('cascade');
-
-			$table->integer('update_no')->default(0);
 		});
 	}
 

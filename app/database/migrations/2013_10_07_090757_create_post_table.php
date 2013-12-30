@@ -16,18 +16,6 @@ class CreatePostTable extends Migration {
 
 			$table->string('title', 200);
 			$table->text('body')->nullable();
-
-			$table->timestamp('create_date');
-
-			$table->string('created_by', 36);
-			$table->foreign('created_by')->references('id')->on('usr_user')->onDelete('set null')->onUpdate('cascade');
-
-			$table->timestamp('update_date')->nullable();
-
-			$table->string('updated_by')->nullable();
-			$table->foreign('updated_by')->references('id')->on('usr_user')->onDelete('set null')->onUpdate('cascade');
-
-			$table->integer('update_no')->default(0);
 		});
 	}
 

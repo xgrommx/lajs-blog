@@ -69,17 +69,20 @@
 
 		</div><!--/.container-->
 
-		<script src="<?php echo URL::asset('assets/js/angular-1.0.8/angular.min.js'); ?>" type="text/javascript"></script>
-		<script src="<?php echo URL::asset('assets/js/angular-1.0.8/angular-ui-router.min.js') ?>" type="text/javascript"></script>
+        <script src="<?php echo URL::asset('assets/js/lib/jquery.min.js'); ?>" type="text/javascript"></script>
+        <script src="<?php echo URL::asset('assets/js/lib/bootstrap.min.js'); ?>" type="text/javascript"></script>
 
-		<script src="<?php echo URL::asset('assets/js/app.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/lib/angular.min.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/lib/angular-ui-router.min.js') ?>" type="text/javascript"></script>
 
-		<script src="<?php echo URL::asset('assets/js/controllers/PostControllers.js'); ?>" type="text/javascript"></script>
-		<script src="<?php echo URL::asset('assets/js/controllers/LoginController.js'); ?>" type="text/javascript"></script>
-		<script src="<?php echo URL::asset('assets/js/controllers/NavigationController.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/app/app.js'); ?>" type="text/javascript"></script>
 
-		<script src="<?php echo URL::asset('assets/js/services/PostService.js'); ?>" type="text/javascript"></script>
-		<script src="<?php echo URL::asset('assets/js/services/UserService.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/app/controllers/PostControllers.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/app/controllers/LoginController.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/app/controllers/NavigationController.js'); ?>" type="text/javascript"></script>
+
+		<script src="<?php echo URL::asset('assets/js/app/services/PostService.js'); ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/app/services/UserService.js'); ?>" type="text/javascript"></script>
 
 	</body>
 

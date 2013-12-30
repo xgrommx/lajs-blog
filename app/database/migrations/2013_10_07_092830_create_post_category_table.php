@@ -15,11 +15,6 @@ class CreatePostCategoryTable extends Migration {
 			$table->string('category_id', 36)->references('id')->on('pst_category')->onDelete('cascade')->onUpdate('cascade');
 
 			$table->primary(array('post_id', 'category_id'));
-
-			$table->timestamp('create_date');
-
-			$table->string('created_by', 36);
-			$table->foreign('created_by')->references('id')->on('usr_user')->onDelete('set null')->onUpdate('cascade');
 		});
 	}
 

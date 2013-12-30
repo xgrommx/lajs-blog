@@ -13,18 +13,6 @@ class CreateTagsTable extends Migration {
 		\Schema::create('pst_tag', function($table) {
 			$table->string('id', 36);
 			$table->primary('id');
-
-			$table->timestamp('create_date');
-
-			$table->string('created_by', 36);
-			$table->foreign('created_by')->references('id')->on('usr_user')->onDelete('set null')->onUpdate('cascade');
-
-			$table->timestamp('update_date')->nullable();
-
-			$table->string('updated_by')->nullable();
-			$table->foreign('updated_by')->references('id')->on('usr_user')->onDelete('set null')->onUpdate('cascade');
-
-			$table->integer('update_no')->default(0);
 		});
 	}
 

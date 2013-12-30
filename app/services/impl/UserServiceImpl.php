@@ -20,7 +20,7 @@ class UserServiceImpl implements UserService {
 	 * @return User
 	 */
 	public function fetchByLogin($login) {
-		return User::where('login', $login)->firstOrFail();
+		return User::where('login', $login)->first();
 	}
 
 	/**
@@ -32,7 +32,7 @@ class UserServiceImpl implements UserService {
 	public function authenticate($user) {
 		$dbUser = $this->fetchByLogin($user['login']);
 
-		if ($dbUser != null && $dbUser->login == $user['login'] && \Hash::check($user['password'] . $dbUser->salt, $dbUser->password)) {
+		if ($dbUser != null && $dbUser->login == $user['login'] && \Hash::check($dbUser->salt . $user['password'], $dbUser->password)) {
 			\Auth::login($dbUser);
 			return true;
 		} else {

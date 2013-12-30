@@ -15,7 +15,7 @@
 			<li><a href="#contact" ng-click="active='contact'">Contact</a></li>
 		</ul>
 
-		<button type="button" class="btn btn-default navbar-btn pull-right" ui-sref="login">Sign in</button>
+		<button type="button" class="btn btn-default navbar-btn pull-right" ui-sref="login">Login</button>
 
 	</div><!-- /.nav-collapse -->
 </div><!-- /.container -->

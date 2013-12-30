@@ -73,7 +73,7 @@
         <script src="<?php echo URL::asset('assets/js/lib/bootstrap.min.js'); ?>" type="text/javascript"></script>
 
 		<script src="<?php echo URL::asset('assets/js/lib/angular.min.js'); ?>" type="text/javascript"></script>
-		<script src="<?php echo URL::asset('assets/js/lib/angular-ui-router.min.js') ?>" type="text/javascript"></script>
+		<script src="<?php echo URL::asset('assets/js/lib/angular/angular-ui-router.min.js') ?>" type="text/javascript"></script>
 
 		<script src="<?php echo URL::asset('assets/js/app/app.js'); ?>" type="text/javascript"></script>
 

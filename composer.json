@@ -1,10 +1,11 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
+	"name": "flakron/blog",
+	"description": "A simple blog",
+	"keywords": ["blog", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.0.*"
+		"laravel/framework": "4.0.*",
+		"barryvdh/laravel-ide-helper": "1.*"
 	},
 	"require-dev": {
 		"mockery/mockery": "dev-master"
@@ -30,6 +31,8 @@
 			"php artisan clear-compiled"
 		],
 		"post-update-cmd": [
+			"php artisan optimize",
+			"php artisan ide-helper:generate",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [

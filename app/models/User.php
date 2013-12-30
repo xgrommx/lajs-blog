@@ -1,10 +1,19 @@
 <?php
-
 namespace flakron\blog\app\models;
 
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
+/**
+ * An Eloquent Model: 'flakron\blog\app\models\User'
+ *
+ * @author Flakron Bytyqi <flakron@gmail.com>
+ * @property string $id
+ * @property string $login
+ * @property string $salt
+ * @property string $password
+ * @property boolean $active
+ */
 class User extends \Eloquent implements UserInterface, RemindableInterface {
 
 	/**
@@ -19,7 +28,14 @@ class User extends \Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var array
 	 */
-	protected $hidden = array('password');
+	protected $hidden = array('password', 'salt');
+
+	/**
+	 * No timestamps in tables
+	 *
+	 * @var bool
+	 */
+	public $timestamps = false;
 
 	/**
 	 * Get the unique identifier for the user.

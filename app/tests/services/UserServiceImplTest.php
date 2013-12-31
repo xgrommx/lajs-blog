@@ -1,14 +1,14 @@
 <?php
-namespace tests\services;
+namespace flakron\blog\app\tests\services;
+
 use flakron\blog\app\services\impl\UserServiceImpl;
 
 /**
  * Class UserServiceTest
  *
- * @package tests\services
- * @author Flakron Bytyqi <flakron@gmail.com>
+ * @package flakron\blog\app\tests\services
  */
-class UserServiceTest extends \TestCase {
+class UserServiceImplTest extends \TestCase {
 
 	private $userService;
 

@@ -1,5 +1,5 @@
 <?php
-namespace flakron\blog\app\tests;
+namespace flakron\blog\app\tests\models;
 
 use flakron\blog\app\models\User;
 

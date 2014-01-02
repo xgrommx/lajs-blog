@@ -1,6 +1,6 @@
 ## Simple blog using AngularJS + Laravel 4 + Twitter Bootstrap
 ==============================================================
-<img src="https://travis-ci.org/flakron/lajs-blog.png?branch=master" />
+<a href="https://travis-ci.org/><img src="https://travis-ci.org/flakron/lajs-blog.png?branch=master" /></a>
 
 To run the application you need to have composer installed.
 Open the terminal, go to the application folder and execute:

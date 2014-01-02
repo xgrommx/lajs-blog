@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" ng-controller="NavigationController">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#">flakron.net</a>
+		<a class="navbar-brand" href="#">Another Blog</a>
 	</div>
 	<div class="collapse navbar-collapse">
 		<ul class="nav navbar-nav">
@@ -15,7 +15,7 @@
 			<li><a href="#contact" ng-click="active='contact'">Contact</a></li>
 		</ul>
 
-		<button type="button" class="btn btn-default navbar-btn pull-right" ui-sref="login">Login</button>
+		<button type="button" class="btn btn-default navbar-btn pull-right" ng-click="login()">Sign in</button>
 
 	</div><!-- /.nav-collapse -->
 </div><!-- /.container -->

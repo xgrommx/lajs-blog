@@ -9,7 +9,11 @@
  * @param $location
  * @constructor
  */
-function NavigationController($scope, $location, UserService) {
+function NavigationController($scope, $location, UserService, ModalService) {
+
+	$scope.login = function() {
+		ModalService.dialog('views/user/login');
+	}
 
 	$scope.logout = function() {
 		UserService.logout();

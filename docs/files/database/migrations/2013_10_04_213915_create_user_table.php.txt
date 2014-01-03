@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+
+class CreateUserTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up() {
+		\Schema::create('usr_user', function(\Illuminate\Database\Schema\Blueprint $table) {
+			$table->string('id', 36);
+			$table->primary('id');
+
+			$table->string('login', 100);
+			$table->unique('login');
+
+			$table->string('salt', 36);
+			$table->string('password', 250);
+			$table->boolean('active');
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down() {
+		\Schema::drop('usr_user');
+	}
+
+}

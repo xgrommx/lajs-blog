@@ -1,5 +1,9 @@
 <?php
 
+namespace flakron\blog\app\tests;
+
+use TestCase;
+
 class ExampleTest extends TestCase {
 
 	/**

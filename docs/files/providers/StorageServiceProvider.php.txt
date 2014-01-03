@@ -2,6 +2,8 @@
 
 namespace flakron\blog\app\providers;
 
+use flakron\blog\app\services\impl\UserServiceImpl;
+use flakron\blog\app\services\impl\ValidationService;
 use Illuminate\Support\ServiceProvider;
 
 /**

@@ -1,0 +1,7 @@
+<?php
+namespace flakron\blog\app\services;
+
+
+interface AppService {
+
+}
